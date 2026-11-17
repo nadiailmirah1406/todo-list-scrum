@@ -1,0 +1,103 @@
+/* Mengatur tampilan seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #102B4B;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Mengatur judul */
+h1 {
+    color: #102B4B;
+    text-align: center;
+}
+
+/* Mengatur kolom input tugas */
+input {
+    padding: 12px;
+    width: 60%;
+    border: 1px solid #D5DFEA;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Mengatur tombol tambah tugas */
+button {
+    padding: 12px 18px;
+    background-color: #102B4B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Efek ketika tombol disentuh */
+button:hover {
+    background-color: #FF922B;
+    color: #102B4B;
+}
+
+/* Mengatur daftar tugas */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Mengatur setiap tugas */
+li {
+    background-color: #EAF0F7;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #102B4B;
+}
+
+/* Memberikan efek coret pada tugas selesai */
+/* Memberikan ruang untuk tanda centang */
+li {
+    position: relative;
+    padding-left: 42px;
+}
+
+/* Membuat lingkaran di samping tugas */
+li::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #102B4B;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+/* Menampilkan tanda centang ketika tugas selesai */
+li.selesai::before {
+    content: "✓";
+    background-color: #FF922B;
+    border-color: #FF922B;
+    color: #102B4B;
+    text-align: center;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+/* Menghilangkan efek coret */
+li.selesai {
+    text-decoration: none;
+    opacity: 1;
+}
+
+/* Mengatur informasi jumlah tugas */
+#jumlahTugas {
+    color: #102B4B;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 15px;
+}
